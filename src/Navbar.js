@@ -1,23 +1,27 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-
-export default function Navbar(props) {
+export default function Navbar() {
   const offset = -70;
 
   const navbarStyle = {
-    backgroundColor: props.backgroundColor || "rgba(161, 13, 13, 0.911)",
+    backgroundColor: "#003366",
+    color: "white", 
+  
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light" style={navbarStyle}>
       <div className="container-fluid justify-content-center">
-        <a
-          className="navbar-brand"
-          href="/"
-          style={{ color: "White", fontWeight: "bold" }}
-        >
-          {props.title}
+        {/* Logo as Navbar Brand */}
+        <a className="navbar-brand" href="/" style={{ fontWeight: "bold", color: "white" }}>
+          <div className="logo">
+            <img
+              src="/logo.png"
+              alt="Your Logo"
+              style={{ height: "30px", width: "auto" }} // Set logo height here
+            />
+          </div>
         </a>
 
         {/* Navbar Toggler for Mobile View */}
@@ -33,7 +37,11 @@ export default function Navbar(props) {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div
+          className="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+          style={{ fontWeight: "bold" }}
+        >
           {/* Centered Navbar Items */}
           <ul className="navbar-nav">
             <li className="nav-item">
@@ -43,21 +51,9 @@ export default function Navbar(props) {
                 duration={100}
                 offset={offset}
                 className="nav-link"
+                style={{ color: "white" }} // White text color for links
               >
-                Home
-              </Link>
-            </li>
-
-
-            <li className="nav-item">
-              <Link
-                to="Product"
-                smooth={true}
-                duration={100}
-                offset={offset}
-                className="nav-link"
-              >
-                Products
+                HOME
               </Link>
             </li>
             <li className="nav-item">
@@ -67,45 +63,35 @@ export default function Navbar(props) {
                 duration={100}
                 offset={offset}
                 className="nav-link"
+                style={{ color: "white" }} // White text color for links
               >
-                About Us
+                ABOUT US
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="Card"
+                to="Blogs"
                 smooth={true}
                 duration={100}
                 offset={offset}
                 className="nav-link"
+                style={{ color: "white" }} // White text color for links
               >
-                Experience
+                BLOG
               </Link>
             </li>
-            {/* <li className="nav-item">
-              <Link
-                to="Project"
-                smooth={true}
-                duration={100}
-                offset={offset}
-                className="nav-link"
-              >
-                Projects
-              </Link>
-            </li> */}
-
             <li className="nav-item">
               <Link
-                to="Query"
+                to="Gallery"
                 smooth={true}
                 duration={100}
                 offset={offset}
                 className="nav-link"
+                style={{ color: "white" }} // White text color for links
               >
-                Query
+                GALLERY
               </Link>
             </li>
-
             <li className="nav-item">
               <Link
                 to="Footer"
@@ -113,8 +99,33 @@ export default function Navbar(props) {
                 duration={100}
                 offset={offset}
                 className="nav-link"
+                style={{ color: "white" }} // White text color for links
               >
-                Contact Us
+                COMMUNITY
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="Query"
+                smooth={true}
+                duration={100}
+                offset={offset}
+                className="nav-link"
+                style={{ color: "white" }} // White text color for links
+              >
+                QUERY
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="Footer"
+                smooth={true}
+                duration={100}
+                offset={offset}
+                className="nav-link"
+                style={{ color: "white" }} // White text color for links
+              >
+                CONTACT
               </Link>
             </li>
           </ul>
