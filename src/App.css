@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+:root {
+  --background-color1: rgba(161, 13, 13, 0.911);
+  --background-color2: rgb(3, 87, 32);
+  --background-color3: White;
+  --background-color6: rgb(9, 145, 136);
+  --background-color4: rgb(3, 0, 2);
+  --background-color5: rgb(231, 145, 145);
+
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 1px;
+  align-items: center;
+  
+ 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--background-color1);
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Navbar */
+.navbar {
+  background-color: var(--background-color2); /* Change to desired color */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-nav .nav-link {
+  color: var(--background-color3);
+  font-weight: bold;
+  
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  text-decoration: underline
+  ;
+
+}
+.navbar-brand:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  text-decoration: underline
+  ;
+
+}
+
+/* Adjust the font size and padding for smaller screens */
+@media screen and (max-width: 768px) {
+  .nav-link {
+    font-size: 14px;
+    margin-left: 80px;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style the navbar-toggler-icon */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
+.Signup-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 15px;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 500px; /* Optional: Set a max-width */
+  height: auto; /* Adjust the height as needed */
+  margin: 0 auto;
+  justify-content: center; /* Center the content vertically */
+}
+
+.form-container-Signup {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  flex: 1;
+  opacity: 0.95;
+}
+
+form {
+  display: grid;
+  grid-gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='password'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+button {
+  background: linear-gradient(80deg, black, var(--background-color6));
   color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type='submit']:hover {
+  background-color: #0f088a;
 }
