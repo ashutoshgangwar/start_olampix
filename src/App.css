@@ -157,156 +157,99 @@ p {
 
 
 
-/* Cards */
+/* Blog Section */
 
-/* Experiance */
-.exp{
-  color: var(--background-color3);
-  margin-left: 20px;
-  text-decoration:underline;
+.subheading {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: var(--background-color1);
+  text-decoration: underline;
 }
 
+.exp {
+  color: var(--background-color3);
+  margin: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* Card Container */
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px;
+  gap: 20px; /* Add spacing between cards */
 }
 
+/* Individual Cards */
 .card {
-  position: relative;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px var(--background-color2);
-  width: calc(33.33% - 20px); /* Adjusted width */
-  box-shadow: 0 2px 4px var(--background-color2);
-  text-align: left; /* Align text to the left */
-  margin-bottom: 20px;
-  padding: 20px; /* Add padding to the card content */
-  max-width: 300px; /* Set a max-width for better readability */
-
-  /* Add a media query to make cards full width on smaller screens */
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
+  text-align: center;
+  width: 100%; /* Default width */
+  max-width: 300px; /* Constrain the card's width */
+  padding: 20px;
+  background-color: var(--background-color3);
+  color: var(--background-color1);
 }
 
-.card h3,
-.card p,
-.card span,
-.card li {
-  margin: 0;
-  padding: 0;
-}
-
-.card span {
-  display: block;
-  margin-bottom: 10px; /* Add some space between spans */
-  font-weight: bold; /* Make spans bold */
-}
-
-.card li {
-  list-style-type: none; /* Remove default list style */
-  margin-bottom: 5px; /* Add some space between list items */
-}
-
-.image-comapny img {
+.card img {
   height: 80px;
   width: 80px;
-  position: relative;
-  margin-top: 5px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.job-time {
-  margin-top: 5px;
+.card h6 {
+  color: var(--background-color1);
+  border: 2px solid var(--background-color1);
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 5px;
+  display: inline-block;
+  font-size: 1rem;
 }
 
-.bullet-item {
-  margin-bottom: 5px; /* Adjust spacing between items */
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 10px;
   color: var(--background-color1);
 }
 
-.bullet-item:before {
-  content: "•"; /* Bullet character */
-  margin-right: 5px; /* Adjust spacing between bullet and text */
-}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
-.job-timing {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 10px;
-}
-
-
-
-
-/* Projects */
-.exp{
-  color: var(--background-color3);
-  margin-left: 20px;
-  text-decoration:underline;
-}
-
-.project-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: var(--background-color1);
-  
-}
-
-.project-card {
-  position: relative;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px var(--background-color3);
-  width: calc(33.33% - 20px); /* Adjusted width */
-  box-shadow: 0 2px 4px var(--background-color2);
-  text-align: left; /* Align text to the left */
-  margin-bottom: 20px;
-  padding: 20px; /* Add padding to the card content */
-  max-width: 300px; /* Set a max-width for better readability */
-  background-color: var(--background-color3);
-  
-
-  /* Add a media query to make cards full width on smaller screens */
-  @media screen and (max-width: 768px) {
+  .card {
     width: 100%;
   }
 }
-
-
-.project-card h3,
-.project-card p,
-.project-card span,
-.project-card li {
-  margin: 0;
-  padding: 0;
+.show-more {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.project-card span {
-  display: block;
-  margin-bottom: 10px; /* Add some space between spans */
-  font-weight: bold; /* Make spans bold */
+.show-more-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--background-color1);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.project-card li {
-  list-style-type: none; /* Remove default list style */
-  margin-bottom: 5px; /* Add some space between list items */
-  
-  
-}
-
-
-.project-bullet-item {
-  margin-bottom: 5px; /* Adjust spacing between items */
-  
-  color: var(--background-color1);
-}
-
-.bullet-item:before {
-  content: "•"; /* Bullet character */
-  margin-right: 5px; /* Adjust spacing between bullet and text */
+.show-more-link:hover {
+  background-color: #1500d6;
 }
