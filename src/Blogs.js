@@ -71,7 +71,7 @@ function Blogs() {
                 margin: "10px top",
               }}
             >
-              <span style={{ margin: "10px" }}>Ashutosh Gangwar</span>{" "}
+              <span style={{ margin: "10px" }}>Neeraj Chopra</span>{" "}
             </h6>
           </div>
           <p>

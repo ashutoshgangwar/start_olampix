@@ -77,7 +77,7 @@ export default function Navbar() {
                 className="nav-link"
                 style={{ color: "white" }} // White text color for links
               >
-                BLOG
+                BLOGS
               </Link>
             </li>
             <li className="nav-item">

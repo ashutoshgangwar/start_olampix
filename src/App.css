@@ -251,5 +251,5 @@ p {
 }
 
 .show-more-link:hover {
-  background-color: #1500d6;
+  background-color: var(--background-color1);
 }
