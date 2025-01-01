@@ -1,28 +1,29 @@
 import React, { useState } from 'react';
 
-
-
 // Sample data
 const images = [
-    { id: '1', tag: 'Beautiful', src: '/pic1.jpeg'},
+  { id: '1', tag: 'Beautiful', src: '/pic1.jpeg' },
   { id: '2', tag: 'Beautiful', src: '/logo.jpeg' },
   { id: '3', tag: 'Cool', src: '/pic1.jpeg' },
   { id: '4', tag: 'Awesome', src: '/pic1.jpeg' },
   { id: '5', tag: 'Beautiful', src: '/pic1.jpeg' },
-  { id: '6', tag: 'Creative', src: '/pic1.jpeg'},
-  { id: '7', tag: 'Cool',src: '/pic1.jpeg' },
-  { id: '8', tag: 'Awesome', src: '/pic1.jpeg' },
+  { id: '5', tag: 'Beautiful', src: '/pic1.jpeg' },
+  { id: '5', tag: 'Beautiful', src: '/pic1.jpeg' },
+ 
 ];
 
 const tags = ['All', 'Beautiful', 'Creative', 'Cool', 'Awesome'];
 
 export default function Gallery() {
   const [selectedTag, setSelectedTag] = useState('All');
+  const [showPopup, setShowPopup] = useState(false);
 
   const filteredImages =
     selectedTag === 'All'
       ? images
       : images.filter((image) => image.tag === selectedTag);
+
+  const visibleImages = filteredImages.slice(0, 6);
 
   return (
     <div className="gallery-container">
@@ -44,12 +45,35 @@ export default function Gallery() {
       </div>
 
       <div className="image-grid">
-        {filteredImages.map((item) => (
+        {visibleImages.map((item) => (
           <div key={item.id} className="image-item">
             <img src={item.src} alt={item.tag} className="image" />
           </div>
         ))}
       </div>
+
+      {filteredImages.length > 6 && (
+        <button className="show-all-button" onClick={() => setShowPopup(true)}>
+          Show All
+        </button>
+      )}
+
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <span className="close-btn" onClick={() => setShowPopup(false)}>
+              &times;
+            </span>
+            <div className="popup-grid">
+              {filteredImages.map((item) => (
+                <div key={item.id} className="popup-image-item">
+                  <img src={item.src} alt={item.tag} className="popup-image" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
