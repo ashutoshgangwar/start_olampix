@@ -319,7 +319,7 @@ p {
 }
 
 .info-box {
-  background-color: var(--background-color1);
+  background-color: #837006;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
@@ -334,10 +334,6 @@ p {
   margin: 0;
   text-align: center;
 }
-
-
-
-
 
 .popup {
   position: fixed;

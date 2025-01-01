@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 
 // Sample data with names and game names
 const images = [
-  { id: '1', tag: '2014', src: '/2014/mary.jpeg', name: 'Mary Kom', gameName: 'Boxing' },
-  { id: '2', tag: '2014', src: '/2014/babita.jpeg', name: 'Babita Phogat', gameName: 'Wrestling' },
-  { id: '3', tag: '2014', src: '/2014/sukhen.jpg', name: 'Sukhen Dey', gameName: 'Weightlifting' },
-  { id: '4', tag: '2014', src: '/2014/abhinav.jpg', name: 'Abhinav Bindra', gameName: 'Shooting' },
-  { id: '5', tag: '2014', src: '/2014/apurvi.jpg', name: 'Apurvi Chandela', gameName: 'Shooting' },
-  { id: '6', tag: '2014', src: '/2014/sanjeeta.jpg', name: 'Sanjeeta', gameName: 'Hockey' },
-  { id: '6', tag: '2014', src: '/2014/sanjeeta.jpg', name: 'Sanjeeta', gameName: 'Hockey' },
-  { id: '6', tag: '2014', src: '/2014/sanjeeta.jpg', name: 'Sanjeeta', gameName: 'Hockey' },
-  { id: '6', tag: '2014', src: '/2014/sanjeeta.jpg', name: 'Sanjeeta', gameName: 'Hockey' },
-  { id: '6', tag: '2014', src: '/2014/sanjeeta.jpg', name: 'Sanjeeta', gameName: 'Hockey' },
+  { id: '1', tag: '2014', src: '/2014/mary.jpeg', name: 'Mary Kom ', gameName: 'Boxing' },
+  { id: '2', tag: '2014', src: '/2014/babita.jpeg', medaltype: 'Gold', name: 'Babita Phogat', gameName: 'Wrestling' },
+  { id: '3', tag: '2014', src: '/2014/sukhen.jpg', medaltype: 'Silver', name: 'Sukhen Dey', gameName: 'Weightlifting' },
+  { id: '4', tag: '2014', src: '/2014/abhinav.jpg', medaltype: 'Bronz', name: 'Abhinav Bindra', gameName: 'Shooting' },
+  { id: '5', tag: '2014', src: '/2014/apurvi.jpg', medaltype: 'Silver', name: 'Apurvi Chandela', gameName: 'Shooting' },
+  { id: '6', tag: '2014', src: '/2014/sanjeeta.jpg', medaltype: 'Gold', name: 'Sanjeeta', gameName: 'Hockey' },
+  { id: '6', tag: '2014', src: '/2014/sanjeeta.jpg', medaltype: 'Bronz', name: 'Sanjeeta', gameName: 'Hockey' },
+  { id: '6', tag: '2014', src: '/2014/sanjeeta.jpg', medaltype: 'Gold', name: 'Sanjeeta', gameName: 'Hockey' },
+  { id: '6', tag: '2014', src: '/2014/sanjeeta.jpg', medaltype: 'Silver', name: 'Sanjeeta', gameName: 'Hockey' },
+  { id: '6', tag: '2014', src: '/2014/sanjeeta.jpg',  medaltype: 'Gold',name: 'Sanjeeta', gameName: 'Hockey' },
 ];
 
 const tags = ['All', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'];
@@ -48,13 +48,26 @@ export default function Gallery() {
 
       <div className="image-grid">
         {visibleImages.map((item) => (
-          <div key={item.id} className="image-item">
-          <img src={item.src} alt={item.name} className="image" />
-          <div className="info-box">
-            <h5 className="image-name">{item.name}</h5>
-            <h6 className="game-name">{item.gameName}</h6>
-          </div>
-        </div>
+         <div
+         key={item.id}
+         className="image-item"
+       >
+         <img src={item.src} alt={item.name} className="image" />
+         <div
+           className="info-box"
+           style={{
+             backgroundColor: 
+               item.medaltype === 'Gold' ? 'gold' : 
+               item.medaltype === 'Silver' ? 'silver' : 
+               item.medaltype === 'Bronz' ? '#cd7f32' : '#837006' // Default color
+           }}
+         >
+           <h5 className="image-name">{item.name}</h5>
+           <h6 className="game-name">({item.medaltype})</h6>
+           <h6 className="game-name">{item.gameName}</h6>
+         </div>
+       </div>
+       
         
         ))}
       </div>
