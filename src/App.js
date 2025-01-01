@@ -40,7 +40,6 @@ function App() {
       <section id="Community">
         <Community />
       </section>
-
       <section id="Footer">
         <Footer />
       </section>

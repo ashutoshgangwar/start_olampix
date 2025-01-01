@@ -445,11 +445,13 @@ p {
   background-color: var(--background-color3);
   padding: 15px 0;
   color: var(--background-color4);
+  
 }
 
 .social-connect p {
   margin: 0;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .social-icons {
@@ -503,5 +505,16 @@ p {
 .footer-bottom {
   padding: 10px 0;
   font-size: 14px;
-  border-top: 1px solid #444;
+  border-top: 1px solid var(--background-color1);
+}
+.social-icons a {
+  color: black; /* Set the icon color to black */
+  margin: 0 10px; /* Add spacing between icons */
+  font-size: 20px; /* Adjust icon size if needed */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth hover effect */
+}
+
+.social-icons a:hover {
+  color: var(--background-color1); /* Change color slightly on hover */
 }

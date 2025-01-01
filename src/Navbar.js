@@ -60,18 +60,7 @@ export default function Navbar() {
                 HOME
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to="Accordion"
-                smooth={true}
-                duration={100}
-                offset={offset}
-                className="nav-link"
-                style={{ color: "white" }} // White text color for links
-              >
-                ABOUT US
-              </Link>
-            </li>
+            
             <li className="nav-item">
               <Link
                 to="Blogs"
@@ -129,7 +118,7 @@ export default function Navbar() {
                 className="nav-link"
                 style={{ color: "white" }} // White text color for links
               >
-                CONTACT
+                ABOUT US
               </Link>
             </li>
           </ul>
