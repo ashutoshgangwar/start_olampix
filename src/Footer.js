@@ -28,10 +28,10 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-column">
           <h4>Company Name</h4>
-          <p>
-            Here you can use rows and columns to organize your footer content.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </p>
+          <h4>
+           OlamPix india Pvt. Ltd.
+           <h6>Glow your passion</h6> 
+          </h4>
         </div>
 
         <div className="footer-column">
@@ -62,7 +62,7 @@ const Footer = () => {
               <a href="#!">Become an Affiliate</a>
             </li>
             <li>
-              <a href="#!">Shipping Rates</a>
+              <a href="#!">FAQ's</a>
             </li>
             <li>
               <a href="#!">Help</a>
@@ -73,16 +73,16 @@ const Footer = () => {
         <div className="footer-column">
           <h4>Contact</h4>
           <ul>
-            <li>New York, NY 10012, US</li>
-            <li>info@example.com</li>
-            <li>+1 234 567 88</li>
-            <li>+1 234 567 89</li>
+            <li>Mayur Vihar Phase-1, 110091, India</li>
+            <li>info@olampix.com</li>
+            <li>+91 234 567 88</li>
+            <li>+91 234 567 89</li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© 2017 Copyright: MDBootstrap.com</p>
+        <p>© 2025 Copyright: olampixindia.com</p>
       </div>
     </footer>
   );
