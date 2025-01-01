@@ -253,3 +253,58 @@ p {
 .show-more-link:hover {
   background-color: var(--background-color1);
 }
+
+
+/* gallery */
+.gallery-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.gallery-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.tags-container {
+  margin-bottom: 30px;
+}
+
+.tag-button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tag-button:hover {
+  background-color: #f0f0f0;
+}
+
+.active-tag {
+  background-color: #00AEEF;
+  color: white;
+  border-color: #00AEEF;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 images per row */
+  gap: 15px;
+}
+
+.image-item img {
+  width: 100%;              /* Make image responsive to grid */
+  height: 200px;            /* Fixed height for all images */
+  object-fit: cover;        /* Crop and fill to fit */
+  border-radius: 10px;
+}

@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import Homepage from "./Homepage";
 // import Product from "./Produtcts";
 import Blogs from "./Blogs";
+import Gallery from "./Gallery";
 // import Accordion from "./Accordion";
 // import Footer from "./Footer";
 // import Query from "./Query";
@@ -30,6 +31,9 @@ function App() {
       </section>
       <section id="Blogs">
         <Blogs />
+      </section>
+      <section id="Gallery">
+        <Gallery />
       </section>
       {/*<section id="Product">
         <Product />
