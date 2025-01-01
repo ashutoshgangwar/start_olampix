@@ -430,3 +430,78 @@ p {
 .card-button:hover {
   background-color: var(--background-color6);
 }
+ 
+
+/* Footer */
+
+.footer {
+  background-color: var(--background-color1);
+  color: var(--background-color3);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-connect {
+  background-color: var(--background-color3);
+  padding: 15px 0;
+  color: var(--background-color4);
+}
+
+.social-connect p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-link {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #ddd;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.footer-column {
+  max-width: 250px;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  padding: 10px 0;
+  font-size: 14px;
+  border-top: 1px solid #444;
+}

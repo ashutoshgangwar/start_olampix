@@ -8,8 +8,9 @@ import Community from "./Community";
 // import Product from "./Produtcts";
 import Blogs from "./Blogs";
 import Gallery from "./Gallery";
+import Footer from "./Footer";
 // import Accordion from "./Accordion";
-// import Footer from "./Footer";
+// 
 // import Query from "./Query";
 // import Project from "./Project";
 
@@ -39,6 +40,11 @@ function App() {
       <section id="Community">
         <Community />
       </section>
+
+      <section id="Footer">
+        <Footer />
+      </section>
+
       {/*<section id="Product">
         <Product />
       </section>
