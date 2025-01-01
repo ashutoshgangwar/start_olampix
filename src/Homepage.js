@@ -24,7 +24,7 @@ function Homepage() {
           and perseverance, often spending years training for a chance to
           compete on the global stage.
         </p>
-        <button className="read-more">READ MORE</button>
+        <button className="button">READ MORE</button>
       </div>
     </div>
   );

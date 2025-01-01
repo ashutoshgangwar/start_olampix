@@ -6,15 +6,19 @@ export default function Navbar() {
 
   const navbarStyle = {
     backgroundColor: "#003366",
-    color: "white", 
-  
+    color: "white",
+    position: "sticky",
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light" style={navbarStyle}>
       <div className="container-fluid justify-content-center">
         {/* Logo as Navbar Brand */}
-        <a className="navbar-brand" href="/" style={{ fontWeight: "bold", color: "white" }}>
+        <a
+          className="navbar-brand"
+          href="/"
+          style={{ fontWeight: "bold", color: "white" }}
+        >
           <div className="logo">
             <img
               src="/logo.png"
@@ -94,7 +98,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="Footer"
+                to="Community"
                 smooth={true}
                 duration={100}
                 offset={offset}

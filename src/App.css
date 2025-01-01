@@ -5,6 +5,9 @@
   --background-color6: rgb(9, 145, 136);
   --background-color4: rgb(3, 0, 2);
   --background-color5: rgb(231, 145, 145);
+  --background-color6:  #1500d6;
+  
+
 }
 
 body {
@@ -140,19 +143,19 @@ p {
   margin-bottom: 30px;
 }
 
-.read-more {
-  padding: 12px 36px;
-  font-size: 1.1rem;
+.button {
+  margin-top: 20px;
+  padding: 10px 25px;
   background-color: var(--background-color1);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
 }
 
-.read-more:hover {
-  background-color: #1500d6;
+.button:hover {
+  background-color: var(--background-color6);
 }
 
 
@@ -291,14 +294,14 @@ p {
 }
 
 .active-tag {
-  background-color: #00AEEF;
+  background-color: var(--background-color1);
   color: white;
-  border-color: #00AEEF;
+  border-color: var(--background-color1);
 }
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* 3 images per row */
+  grid-template-columns: repeat(3, 1fr);  /* 3 images per row */
   gap: 10px 4px; /* 4px row gap, 8px column gap */
 }
 
@@ -309,16 +312,7 @@ p {
   border-radius: 10px;
 }
 
-.show-all-button {
-  margin-top: 20px;
-  padding: 10px 25px;
-  background-color: #00AEEF;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 16px;
-}
+
 
 .popup {
   position: fixed;
@@ -351,7 +345,7 @@ p {
 
 .popup-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px 4px; /* 4px row gap, 8px column gap */
 }
 
@@ -360,4 +354,74 @@ p {
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
+}
+.close-popup-btn {
+  display: inline-block;
+  margin-bottom: 20px; /* Space between the button and the content */
+  padding: 10px 20px;
+  background-color: var(--background-color1);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.close-popup-btn:hover {
+  background-color: var(--background-color6);
+}
+
+
+/* Community */
+
+.community-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 2px solid #f0c02f;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.card-button {
+  background-color: var(--background-color1);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: var(--background-color6);
 }

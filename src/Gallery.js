@@ -9,7 +9,6 @@ const images = [
   { id: '5', tag: 'Beautiful', src: '/pic1.jpeg' },
   { id: '5', tag: 'Beautiful', src: '/pic1.jpeg' },
   { id: '5', tag: 'Beautiful', src: '/pic1.jpeg' },
- 
 ];
 
 const tags = ['All', 'Beautiful', 'Creative', 'Cool', 'Awesome'];
@@ -53,7 +52,7 @@ export default function Gallery() {
       </div>
 
       {filteredImages.length > 6 && (
-        <button className="show-all-button" onClick={() => setShowPopup(true)}>
+        <button className="button" onClick={() => setShowPopup(true)}>
           Show All
         </button>
       )}
@@ -61,9 +60,12 @@ export default function Gallery() {
       {showPopup && (
         <div className="popup">
           <div className="popup-content">
-            <span className="close-btn" onClick={() => setShowPopup(false)}>
-              &times;
-            </span>
+            <button
+              className="close-popup-btn"
+              onClick={() => setShowPopup(false)}
+            >
+              Close
+            </button>
             <div className="popup-grid">
               {filteredImages.map((item) => (
                 <div key={item.id} className="popup-image-item">

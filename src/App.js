@@ -4,6 +4,7 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Navbar";
 import Homepage from "./Homepage";
+import Community from "./Community";
 // import Product from "./Produtcts";
 import Blogs from "./Blogs";
 import Gallery from "./Gallery";
@@ -34,6 +35,9 @@ function App() {
       </section>
       <section id="Gallery">
         <Gallery />
+      </section>
+      <section id="Community">
+        <Community />
       </section>
       {/*<section id="Product">
         <Product />
