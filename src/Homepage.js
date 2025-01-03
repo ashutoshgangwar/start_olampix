@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "./images/homepage.jpeg"; // Adjust path based on actual file structure
+import backgroundImage from "./images/home.jpg"; // Adjust path based on actual file structure
 
 function Homepage() {
   return (
