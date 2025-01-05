@@ -23,33 +23,48 @@ const images = [
 ];
 
 const tags = ['All', '2012', '2016', '2020', '2024'];
+const medalFilters = ['All', 'Gold', 'Silver', 'Bronz'];
 
 export default function Gallery() {
   const [selectedTag, setSelectedTag] = useState('All');
+  const [selectedMedal, setSelectedMedal] = useState('All');
   const [showPopup, setShowPopup] = useState(false);
 
-  const filteredImages =
-    selectedTag === 'All'
-      ? images
-      : images.filter((image) => image.tag === selectedTag);
+  const filteredImages = images.filter((image) => {
+    const yearMatch = selectedTag === 'All' || image.tag === selectedTag;
+    const medalMatch = selectedMedal === 'All' || image.medaltype === selectedMedal;
+    return yearMatch && medalMatch;
+  });
 
   const visibleImages = filteredImages.slice(0, 10);
 
   return (
     <div className="gallery-container">
-      <h1 className="gallery-title">Gallery</h1>
-      <p className="gallery-subtitle">Put in use some tags</p>
+      <h1 className="gallery-title">
+        Gallery (Total Medal : {filteredImages.length})
+      </h1>
+      {/* <p className="gallery-subtitle">Filter by year or medal type</p> */}
 
       <div className="tags-container">
         {tags.map((tag) => (
           <button
             key={tag}
-            className={`tag-button ${
-              selectedTag === tag ? 'active-tag' : ''
-            }`}
+            className={`tag-button ${selectedTag === tag ? 'active-tag' : ''}`}
             onClick={() => setSelectedTag(tag)}
           >
             {tag}
+          </button>
+        ))}
+      </div>
+
+      <div className="tags-container">
+        {medalFilters.map((medal) => (
+          <button
+            key={medal}
+            className={`tag-button ${selectedMedal === medal ? 'active-tag' : ''}`}
+            onClick={() => setSelectedMedal(medal)}
+          >
+            {medal}
           </button>
         ))}
       </div>
@@ -94,8 +109,17 @@ export default function Gallery() {
               {filteredImages.map((item) => (
                 <div key={item.id} className="popup-image-item">
                   <img src={item.src} alt={item.name} className="popup-image" />
-                  <div className="info-box">
+                  <div
+                    className="info-box"
+                    style={{
+                      backgroundColor:
+                        item.medaltype === 'Gold' ? '#cfb53b' :
+                        item.medaltype === 'Silver' ? 'silver' :
+                        item.medaltype === 'Bronz' ? '#cd7f32' : '#837006'
+                    }}
+                  >
                     <p className="popup-image-name">{item.name}</p>
+                    <h6 className="game-name">({item.medaltype})</h6>
                     <p className="popup-game-name">{item.gameName}</p>
                   </div>
                 </div>
