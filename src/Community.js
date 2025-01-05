@@ -6,7 +6,7 @@ const Community = () => {
     {
       title: "Ex-Athlete",
       image: "athlete.jpeg",
-      description: "Former athletes who contribute to the sports community through their experience and knowledge.",
+      description: "Former athletes who contribute to the sports community through.",
     },
     {
       title: "Coach",
