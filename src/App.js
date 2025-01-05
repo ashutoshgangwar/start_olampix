@@ -2,16 +2,17 @@
 import React from "react";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./Navbar";
-import Homepage from "./Homepage";
-import Community from "./Community";
+import Navbar from "./components/Navbar";
+import Homepage from "./components/Homepage";
+import Community from "./components/Community";
 // import Product from "./Produtcts";
-import Blogs from "./Blogs";
-import Gallery from "./Gallery";
-import Footer from "./Footer";
+import Blogs from "./components/Blogs";
+import Gallery from "./components/Gallery";
+import Query from "./components/Query";
+import Footer from "./components/Footer";
 // import Accordion from "./Accordion";
 // 
-// import Query from "./Query";
+// 
 // import Project from "./Project";
 
 
@@ -40,6 +41,9 @@ function App() {
       <section id="Community">
         <Community />
       </section>
+      <section id="Query">
+        <Query />
+      </section>
       <section id="Footer">
         <Footer />
       </section>
@@ -55,9 +59,7 @@ function App() {
         <Project/>
       </section>  */}
 
-      {/* <section id="Query">
-        <Query />
-      </section>
+      {/* 
       <section id="Footer">
         <Footer />
       </section> */} 
