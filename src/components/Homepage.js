@@ -13,13 +13,14 @@ function Homepage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
+    logoflagImage6,
     homeImage,
     logoflagImage1,
     logoflagImage2,
     logoflagImage3,
     logoflagImage4,
     logoflagImage5,
-    logoflagImage6,
+    
   ];
 
   useEffect(() => {

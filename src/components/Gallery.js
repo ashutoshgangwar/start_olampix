@@ -254,7 +254,7 @@ export default function Gallery() {
               style={{
                 backgroundColor:
                   item.medaltype === "Gold"
-                    ? "#cfb53b"
+                    ? "#ffd700"
                     : item.medaltype === "Silver"
                     ? "silver"
                     : item.medaltype === "Bronz"

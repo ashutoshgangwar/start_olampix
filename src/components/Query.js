@@ -30,7 +30,7 @@ const ContactForm = () => {
             className="textarea-field"
           ></textarea>
           <button className="send-button">
-             Send
+             SUBMIT
           </button>
         </div>
       </div>
