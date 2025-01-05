@@ -112,7 +112,7 @@ function Blogs() {
       </div>
       {/* Add "Show More" link */}
       <div className="show-more">
-        <a href="/more-blogs" className="button">Show More</a>
+        <a href="/more-blogs" className="button">Show All</a>
       </div>
     </div>
   );
