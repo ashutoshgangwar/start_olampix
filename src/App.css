@@ -789,14 +789,13 @@ body {
 @media (max-width: 768px) {
   .query-container{
     padding: 8px;
-    height: 10px;
+    
   }
 
 }
 
 
-/* Footer */
-
+/* General Footer Styling */
 .footer {
   background-color: var(--background-color1);
   color: var(--background-color3);
@@ -808,7 +807,6 @@ body {
   background-color: var(--background-color3);
   padding: 15px 0;
   color: var(--background-color4);
-
 }
 
 .social-connect p {
@@ -823,23 +821,25 @@ body {
 
 .social-link {
   margin: 0 10px;
-  color: white;
+  color: black;
   font-size: 20px;
   text-decoration: none;
 }
 
 .social-link:hover {
-  color: #ddd;
+  color: var(--background-color1);
 }
 
 .footer-content {
   display: flex;
   justify-content: space-around;
   padding: 20px;
+  flex-wrap: wrap; /* Ensure columns stack on smaller screens */
 }
 
 .footer-column {
   max-width: 250px;
+  margin-bottom: 20px; /* Add spacing between columns */
 }
 
 .footer-column h4 {
@@ -871,23 +871,40 @@ body {
   border-top: 1px solid var(--background-color1);
 }
 
-.social-icons a {
-  color: black;
-  /* Set the icon color to black */
-  margin: 0 10px;
-  /* Add spacing between icons */
-  font-size: 20px;
-  /* Adjust icon size if needed */
-  text-decoration: none;
-  /* Remove underline */
-  transition: color 0.3s;
-  /* Smooth hover effect */
+/* Adjustments for Mobile View */
+@media (max-width: 480px) {
+  .footer-content {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center;
+  }
+
+  .footer-column {
+    max-width: 100%; /* Expand columns to full width */
+    text-align: center; /* Center text for mobile */
+  }
+
+  .footer-column h4 {
+    font-size: 16px;
+  }
+
+  .footer-column ul li {
+    font-size: 14px;
+  }
+
+  .social-connect p {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .social-link {
+    font-size: 16px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    margin: 5px 0; /* Adjust spacing */
+  }
 }
 
-.social-icons a:hover {
-  color: var(--background-color1);
-  /* Change color slightly on hover */
-}
 
 
 /* Responsive Design for Image Grid */
