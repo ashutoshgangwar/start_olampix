@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import "./../App.css";
 
 export default function Navbar() {
   const offset = -70;
@@ -8,11 +9,13 @@ export default function Navbar() {
     backgroundColor: "#003366",
     color: "white",
     position: "sticky",
+    top: 0,
+    zIndex: 1000,
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light" style={navbarStyle}>
-      <div className="container-fluid justify-content-center">
+      <div className="container-fluid">
         {/* Logo as Navbar Brand */}
         <a
           className="navbar-brand"
@@ -41,12 +44,13 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* Collapsible Menu */}
         <div
           className="collapse navbar-collapse justify-content-center"
           id="navbarNav"
           style={{ fontWeight: "bold" }}
         >
-          {/* Centered Navbar Items */}
+          {/* Navbar Items */}
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
@@ -60,7 +64,6 @@ export default function Navbar() {
                 HOME
               </Link>
             </li>
-            
             <li className="nav-item">
               <Link
                 to="Blogs"

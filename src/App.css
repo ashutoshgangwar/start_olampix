@@ -30,14 +30,13 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* Ensures proper spacing between brand and toggler */
+  padding: 0 20rem; /* Add padding for spacing */
 }
 
 .navbar-brand {
   font-weight: bold;
   color: var(--background-color3);
-  margin-right: auto;
-  padding: 0 20px;
   font-size: 1.5rem;
 }
 
@@ -45,7 +44,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Spacing between links */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -54,6 +52,7 @@ body {
 .nav-item {
   margin: 0;
 }
+
 .nav-link {
   color: var(--background-color3);
   text-decoration: none;
@@ -62,42 +61,61 @@ body {
   padding: 8px 12px;
 }
 
-
-
-.nav-link:hover, .navbar-brand:hover {
+.nav-link:hover,
+.navbar-brand:hover {
   cursor: pointer;
   transform: scale(1.1);
   text-decoration: underline;
 }
 
+/* Toggler Button */
 .navbar-toggler {
+  background: none;
   border: none;
-  background: transparent;
-  color: var(--background-color3);
   font-size: 1.5rem;
-  display: none; /* Hidden by default */
-}
-
-@media screen and (max-width: 768px) {
-  .nav-link {
-    font-size: 14px;
-    margin-left: 80px;
-  }
-  .navbar-brand {
-    font-size: 18px;
-  }
-  .logo img {
-    height: 30px;
-  }
+  z-index: 1000;
+  color: var(--background-color3); /* Use theme color for toggler */
 }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-.navbar-toggler:focus .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    background-color: var(--background-color1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-toggler.active + .navbar-nav {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+  }
 }
+
+/* Optional Focus Effect for Toggler */
+.navbar-toggler:focus .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 
 
 /* Homepage */
@@ -150,6 +168,8 @@ body {
 .floating-card p {
   font-size: 1.2rem;
   margin-bottom: 25px;
+  font-weight: bold;
+
 }
 .indicator {
   width: 15px;
@@ -320,7 +340,16 @@ p {
   margin-top: 10px;
   color: var(--background-color1);
 }
+@media screen and (max-width: 768px) {
+  .floating-card {
+    width: 90%;
+    padding: 15px;
+  }
 
+  .floating-card p {
+    font-size: 0.9rem;
+  }
+}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .card-container {
@@ -761,3 +790,131 @@ p {
 }
 
 
+/* Responsive Design for Image Grid */
+@media screen and (max-width: 1024px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr); /* Adjust columns for tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust columns for mobile */
+  }
+
+  .image-item img {
+    width: 100%; /* Make images fully responsive */
+  }
+}
+
+/* Gallery Title and Subtitle */
+@media screen and (max-width: 768px) {
+  .gallery-title {
+    font-size: 28px; /* Adjust title size for smaller screens */
+  }
+
+  .gallery-subtitle {
+    font-size: 16px; /* Adjust subtitle size for smaller screens */
+  }
+}
+
+/* Floating Card Responsiveness */
+@media screen and (max-width: 768px) {
+  .floating-card {
+    width: 80%; /* Reduce width on smaller screens */
+    padding: 20px; /* Adjust padding */
+  }
+
+  .floating-card p {
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+
+/* Navbar Responsiveness */
+@media screen and (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-toggler {
+    display: block; /* Show toggler for smaller screens */
+  }
+
+  .navbar-nav {
+    display: none; /* Initially hide nav items */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar-nav.active {
+    display: flex; /* Show nav items when active */
+  }
+
+  .nav-link {
+    padding: 10px;
+    width: 100%; /* Full-width links for better tap targets */
+    text-align: left;
+  }
+}
+
+/* Card Responsiveness */
+@media screen and (max-width: 576px) {
+  .card-container {
+    padding: 10px;
+  }
+
+  .card {
+    width: 90%; /* Reduce card width for smaller screens */
+  }
+
+  .card img {
+    height: 60px;
+    width: 60px; /* Adjust image size for small screens */
+  }
+}
+
+/* Content Section Responsiveness */
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 10px;
+    width: 95%; /* Adjust content width */
+  }
+}
+
+/* Button Responsiveness */
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9rem; /* Adjust button font size */
+  }
+}
+
+/* Blog Section Responsiveness */
+@media screen and (max-width: 768px) {
+  .subheading {
+    font-size: 1.2rem; /* Adjust subheading size */
+  }
+
+  .exp {
+    font-size: 1rem; /* Adjust experience font size */
+  }
+}
+
+/* Gallery Tag Buttons */
+@media screen and (max-width: 768px) {
+  .tag-button {
+    font-size: 0.9rem; /* Adjust tag button font size */
+    padding: 8px 15px; /* Adjust padding */
+  }
+}
+
+/* Footer Responsiveness (if applicable) */
+@media screen and (max-width: 768px) {
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+}
