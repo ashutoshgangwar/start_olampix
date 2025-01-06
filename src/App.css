@@ -4,9 +4,9 @@
   --background-color3: white;
   --background-color4: rgb(3, 0, 2);
   --background-color5: rgb(231, 145, 145);
-  --background-color6:  #1500d6;
+  --background-color6: #1500d6;
   --background-color7: rgb(9, 145, 136);
-  
+
 
 }
 
@@ -30,8 +30,10 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensures proper spacing between brand and toggler */
-  padding: 0 20rem; /* Add padding for spacing */
+  justify-content: space-between;
+  /* Ensures proper spacing between brand and toggler */
+  padding: 0 20rem;
+  /* Add padding for spacing */
 }
 
 .navbar-brand {
@@ -74,7 +76,8 @@ body {
   border: none;
   font-size: 1.5rem;
   z-index: 1000;
-  color: var(--background-color3); /* Use theme color for toggler */
+  color: var(--background-color3);
+  /* Use theme color for toggler */
 }
 
 .navbar-toggler-icon {
@@ -99,7 +102,7 @@ body {
     display: block;
   }
 
-  .navbar-toggler.active + .navbar-nav {
+  .navbar-toggler.active+.navbar-nav {
     display: flex;
   }
 
@@ -136,9 +139,9 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: opacity 1s ease;
   position: absolute;
   opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .carousel-slide.active {
@@ -148,11 +151,27 @@ body {
 .carousel-indicators {
   position: absolute;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50%; /* Center the indicators */
+  transform: translateX(-50%); /* Ensure perfect centering */
   display: flex;
   gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: var(--background-color1);
+}
+
+/* Floating Card */
 .floating-card {
   position: absolute;
   top: 60%;
@@ -160,118 +179,77 @@ body {
   transform: translate(-50%, -50%);
   background: rgba(247, 246, 246, 0.7);
   color: black;
-  padding: 40px;
+  padding: 30px;
   text-align: center;
-  width: 50%;
+  width: 80%;
   border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.floating-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
 .floating-card p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+  font-size: 1rem;
+  margin-bottom: 20px;
   font-weight: bold;
-
-}
-.indicator {
-  width: 15px;
-  height: 15px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  
 }
 
-.indicator.active {
-  background-color: var(--background-color1);
-  align-items: center;
-}
-
-/* Overlay for dimming the background */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: rgba(0, 0, 0, 0.5); Dark overlay */
-    backdrop-filter: blur(5px);
-    background: rgba(0, 0, 0, 0.4);
-  
-}
-
-/* The content inside the container */
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the content */
-  z-index: 1; /* Ensures text appears on top of the images */
-  text-align: center;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  width: 90%; /* Ensure some space on the sides */
-  max-width: 800px; /* Optional: maximum width to prevent stretching */
-}
-
-/* Image carousel container */
-.image-carousel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; /* Prevent image overflow */
-}
-
-/* The actual images in the carousel */
-.carousel-images {
-  display: flex;
-  transition: transform 1s ease;
-  width: 100%;
-  height: 100%;
-}
-
-/* Each image in the carousel */
-.carousel-image {
-  min-width: 100%;
-  height: 100%;
-}
-
-/* Image styling for the carousel */
-.carousel-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the full area */
-}
-
-
-/* Paragraph Styling */
-p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-/* Button Styling */
 .button {
   background-color: var(--background-color1);
-  padding: 12px 24px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
   font-weight: bold;
   border-radius: 6px;
   color: white;
-  margin-top: 15px;
-  text-decoration:underline;
+  text-decoration: underline;
+  transition: background-color 0.3s ease;
 }
 
-/* Button Hover Styling */
 .button:hover {
   background-color: #f2b400;
   color: black;
 }
 
-/* Optional: Add a transition effect to the button */
-.button {
-  transition: background-color 0.3s ease;
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .floating-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .home-container {
+    padding: 1px;
+    border-radius: 5px;
+  }
+
+  .floating-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .floating-card p {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .carousel-indicators {
+    bottom: 10px;
+    gap: 8px;
+    left: 50%; /* Center the indicators */
+    transform: translateX(-50%); /* Ensure they are centered */
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 
@@ -299,7 +277,8 @@ p {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
-  gap: 20px; /* Add spacing between cards */
+  gap: 20px;
+  /* Add spacing between cards */
 }
 
 /* Individual Cards */
@@ -308,8 +287,10 @@ p {
   border-radius: 8px;
   box-shadow: 0 2px 4px var(--background-color2);
   text-align: center;
-  width: 100%; /* Default width */
-  max-width: 300px; /* Constrain the card's width */
+  width: 100%;
+  /* Default width */
+  max-width: 300px;
+  /* Constrain the card's width */
   padding: 20px;
   background-color: var(--background-color3);
   color: var(--background-color1);
@@ -340,16 +321,19 @@ p {
   margin-top: 10px;
   color: var(--background-color1);
 }
+
 @media screen and (max-width: 768px) {
   .floating-card {
     width: 90%;
     padding: 15px;
   }
 
+
   .floating-card p {
     font-size: 0.9rem;
   }
 }
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .card-container {
@@ -362,6 +346,7 @@ p {
     width: 100%;
   }
 }
+
 .show-more {
   text-align: center;
   margin-top: 20px;
@@ -373,7 +358,8 @@ p {
   padding: 10px 20px;
   background-color: var(--background-color1);
   color: black;
-  text-decoration: none; /* Ensure no underline */
+  text-decoration: none;
+  /* Ensure no underline */
   border-radius: 5px;
   font-size: 1rem;
   transition: background-color 0.3s ease;
@@ -382,7 +368,8 @@ p {
 .show-more-link:hover,
 .show-more-link a:hover {
   background-color: var(--background-color2);
-  text-decoration: none; /* Remove underline on hover too */
+  text-decoration: none;
+  /* Remove underline on hover too */
 }
 
 
@@ -430,14 +417,15 @@ p {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);  
-  gap: 10px 4px; 
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px 4px;
 }
 
 .image-item {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center image and info-box horizontally */
+  align-items: center;
+  /* Center image and info-box horizontally */
 }
 
 .image-item img {
@@ -453,12 +441,15 @@ p {
   border-radius: 10px;
   margin-top: 10px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  width: 80%; /* Match image width */
-  text-align: center; /* Center text inside */
+  width: 80%;
+  /* Match image width */
+  text-align: center;
+  /* Center text inside */
   max-width: 90%;
 }
 
-.image-name, .game-name {
+.image-name,
+.game-name {
   font-size: 14px;
   color: var(--background-color4);
   margin: 0;
@@ -476,8 +467,10 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2000; /* Ensure it is above all other components */
-  overflow: hidden; /* Prevent unwanted scrolling */
+  z-index: 2000;
+  /* Ensure it is above all other components */
+  overflow: hidden;
+  /* Prevent unwanted scrolling */
 }
 
 .popup-content {
@@ -495,25 +488,30 @@ p {
   right: 25px;
   font-size: 30px;
   cursor: pointer;
-  z-index: 2002; 
+  z-index: 2002;
 }
 
 .popup-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px 4px; /* 4px row gap, 8px column gap */
+  gap: 10px 4px;
+  /* 4px row gap, 8px column gap */
 }
+
 .popup-image-item {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center image and info-box horizontally */
+  align-items: center;
+  /* Center image and info-box horizontally */
 }
+
 .popup-image-item img {
   width: 85%;
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
 }
+
 .popup-image-item .info-box {
   background-color: var(--background-color1);
   color: var(--background-color3);
@@ -522,18 +520,25 @@ p {
   margin-top: 5px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   color: var(--background-color4);
-  width: 85%; /* Match image width */
-  text-align: center; /* Center text inside */
+  width: 85%;
+  /* Match image width */
+  text-align: center;
+  /* Center text inside */
 }
-.popup-image-name, .popup-game-name {
-  font-size: 12px;  /* Smaller font size */
-  margin: 2px 0;  
+
+.popup-image-name,
+.popup-game-name {
+  font-size: 12px;
+  /* Smaller font size */
+  margin: 2px 0;
   font-weight: bold;
-   /* Reduce space between name and game */
+  /* Reduce space between name and game */
 }
+
 .close-popup-btn {
   display: inline-block;
-  margin-bottom: 20px; /* Space between the button and the content */
+  margin-bottom: 20px;
+  /* Space between the button and the content */
   padding: 10px 20px;
   background-color: var(--background-color1);
   color: white;
@@ -552,8 +557,10 @@ p {
 /* Community */
 
 .community-container {
-  position: relative; /* Ensure it respects its layout */
-  z-index: 1000; /* Set a lower z-index than the popup */
+  position: relative;
+  /* Ensure it respects its layout */
+  z-index: 1000;
+  /* Set a lower z-index than the popup */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -605,7 +612,7 @@ p {
 }
 
 
- /* for query  */
+/* for query  */
 
 .query-container {
   min-height: 100vh;
@@ -614,9 +621,9 @@ p {
   align-items: center;
   /* background: linear-gradient(to right, #1a202c, #4c51bf); */
   background: var(--background-color1);
-   /* background: linear-gradient(to right, #9f7aea, #667eea); */
+  /* background: linear-gradient(to right, #9f7aea, #667eea); */
   margin-bottom: 10px;
-  
+
 
 }
 
@@ -691,8 +698,10 @@ p {
   font-weight: 600;
   color: white;
   cursor: pointer;
-  margin: 0 auto; /* Center horizontally */
-  display: block; /* Ensures it's treated as a block element */
+  margin: 0 auto;
+  /* Center horizontally */
+  display: block;
+  /* Ensures it's treated as a block element */
 }
 
 .send-button:hover {
@@ -715,7 +724,7 @@ p {
   background-color: var(--background-color3);
   padding: 15px 0;
   color: var(--background-color4);
-  
+
 }
 
 .social-connect p {
@@ -777,56 +786,71 @@ p {
   font-size: 14px;
   border-top: 1px solid var(--background-color1);
 }
+
 .social-icons a {
-  color: black; /* Set the icon color to black */
-  margin: 0 10px; /* Add spacing between icons */
-  font-size: 20px; /* Adjust icon size if needed */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s; /* Smooth hover effect */
+  color: black;
+  /* Set the icon color to black */
+  margin: 0 10px;
+  /* Add spacing between icons */
+  font-size: 20px;
+  /* Adjust icon size if needed */
+  text-decoration: none;
+  /* Remove underline */
+  transition: color 0.3s;
+  /* Smooth hover effect */
 }
 
 .social-icons a:hover {
-  color: var(--background-color1); /* Change color slightly on hover */
+  color: var(--background-color1);
+  /* Change color slightly on hover */
 }
 
 
 /* Responsive Design for Image Grid */
 @media screen and (max-width: 1024px) {
   .image-grid {
-    grid-template-columns: repeat(3, 1fr); /* Adjust columns for tablets */
+    grid-template-columns: repeat(3, 1fr);
+    /* Adjust columns for tablets */
   }
 }
 
 @media screen and (max-width: 768px) {
   .image-grid {
-    grid-template-columns: repeat(2, 1fr); /* Adjust columns for mobile */
+    grid-template-columns: repeat(2, 1fr);
+    /* Adjust columns for mobile */
   }
 
   .image-item img {
-    width: 100%; /* Make images fully responsive */
+    width: 100%;
+    /* Make images fully responsive */
   }
 }
 
 /* Gallery Title and Subtitle */
 @media screen and (max-width: 768px) {
   .gallery-title {
-    font-size: 28px; /* Adjust title size for smaller screens */
+    font-size: 28px;
+    /* Adjust title size for smaller screens */
   }
 
   .gallery-subtitle {
-    font-size: 16px; /* Adjust subtitle size for smaller screens */
+    font-size: 16px;
+    /* Adjust subtitle size for smaller screens */
   }
 }
 
 /* Floating Card Responsiveness */
 @media screen and (max-width: 768px) {
   .floating-card {
-    width: 80%; /* Reduce width on smaller screens */
-    padding: 20px; /* Adjust padding */
+    width: 80%;
+    /* Reduce width on smaller screens */
+    padding: 20px;
+    /* Adjust padding */
   }
 
   .floating-card p {
-    font-size: 1rem; /* Adjust font size */
+    font-size: 1rem;
+    /* Adjust font size */
   }
 }
 
@@ -839,23 +863,27 @@ p {
   }
 
   .navbar-toggler {
-    display: block; /* Show toggler for smaller screens */
+    display: block;
+    /* Show toggler for smaller screens */
   }
 
   .navbar-nav {
-    display: none; /* Initially hide nav items */
+    display: none;
+    /* Initially hide nav items */
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
   }
 
   .navbar-nav.active {
-    display: flex; /* Show nav items when active */
+    display: flex;
+    /* Show nav items when active */
   }
 
   .nav-link {
     padding: 10px;
-    width: 100%; /* Full-width links for better tap targets */
+    width: 100%;
+    /* Full-width links for better tap targets */
     text-align: left;
   }
 }
@@ -867,12 +895,14 @@ p {
   }
 
   .card {
-    width: 90%; /* Reduce card width for smaller screens */
+    width: 90%;
+    /* Reduce card width for smaller screens */
   }
 
   .card img {
     height: 60px;
-    width: 60px; /* Adjust image size for small screens */
+    width: 60px;
+    /* Adjust image size for small screens */
   }
 }
 
@@ -880,7 +910,8 @@ p {
 @media screen and (max-width: 768px) {
   .content {
     padding: 10px;
-    width: 95%; /* Adjust content width */
+    width: 95%;
+    /* Adjust content width */
   }
 }
 
@@ -888,26 +919,31 @@ p {
 @media screen and (max-width: 768px) {
   .button {
     padding: 10px 20px;
-    font-size: 0.9rem; /* Adjust button font size */
+    font-size: 0.9rem;
+    /* Adjust button font size */
   }
 }
 
 /* Blog Section Responsiveness */
 @media screen and (max-width: 768px) {
   .subheading {
-    font-size: 1.2rem; /* Adjust subheading size */
+    font-size: 1.2rem;
+    /* Adjust subheading size */
   }
 
   .exp {
-    font-size: 1rem; /* Adjust experience font size */
+    font-size: 1rem;
+    /* Adjust experience font size */
   }
 }
 
 /* Gallery Tag Buttons */
 @media screen and (max-width: 768px) {
   .tag-button {
-    font-size: 0.9rem; /* Adjust tag button font size */
-    padding: 8px 15px; /* Adjust padding */
+    font-size: 0.9rem;
+    /* Adjust tag button font size */
+    padding: 8px 15px;
+    /* Adjust padding */
   }
 }
 
