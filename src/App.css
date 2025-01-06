@@ -630,11 +630,14 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9rem;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .card-button:hover {
-  background-color: var(--background-color6);
+  background-color:  #f2b400;
+  color: black;
+  font-weight: bold;
 }
 
 
@@ -733,6 +736,52 @@ body {
 .send-button:hover {
   /* background-color: rgb(31, 31, 102); */
   color: black;
+}
+@media (max-width: 768px) {
+  .community-container {
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    gap: 15px;
+    padding: 10px;
+   
+  }
+  
+  .card {
+    padding: 10px;
+    
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  .card-description {
+    font-size: 0.8rem;
+  }
+  
+  .card-button {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 8px;
+  
+  }
+
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-description {
+    font-size: 0.75rem;
+  }
+
+  .card-button {
+    width: 100%;
+    font-size: 0.75rem;
+  }
 }
 
 

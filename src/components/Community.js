@@ -48,10 +48,9 @@ const Community = () => {
   return (
     <div className="gallery-container">
       <h1 className="gallery-title">Community</h1>
-      <div className="community-container">
+      <div className="community-container" style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
         {cards.map((card, index) => (
           <div className="card" key={index}>
-            {/* Correcting the src path to work with the public folder */}
             <img src={`/${card.image}`} alt={card.title} className="card-image" />
             <h3 className="card-title">{card.title}</h3>
             <p className="card-description">{card.description}</p>
