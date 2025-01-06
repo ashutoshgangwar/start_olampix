@@ -151,8 +151,10 @@ body {
 .carousel-indicators {
   position: absolute;
   bottom: 20px;
-  left: 50%; /* Center the indicators */
-  transform: translateX(-50%); /* Ensure perfect centering */
+  left: 50%;
+  /* Center the indicators */
+  transform: translateX(-50%);
+  /* Ensure perfect centering */
   display: flex;
   gap: 10px;
   align-items: center;
@@ -243,8 +245,10 @@ body {
   .carousel-indicators {
     bottom: 10px;
     gap: 8px;
-    left: 50%; /* Center the indicators */
-    transform: translateX(-50%); /* Ensure they are centered */
+    left: 50%;
+    /* Center the indicators */
+    transform: translateX(-50%);
+    /* Ensure they are centered */
   }
 
   .indicator {
@@ -635,7 +639,7 @@ body {
 }
 
 .card-button:hover {
-  background-color:  #f2b400;
+  background-color: #f2b400;
   color: black;
   font-weight: bold;
 }
@@ -645,22 +649,22 @@ body {
     /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
     gap: 15px;
     padding: 10px;
-   
+
   }
-  
+
   .card {
     padding: 10px;
-    
+
   }
-  
+
   .card-title {
     font-size: 1rem;
   }
-  
+
   .card-description {
     font-size: 0.8rem;
   }
-  
+
   .card-button {
     padding: 8px 15px;
     font-size: 0.8rem;
@@ -670,7 +674,7 @@ body {
 @media (max-width: 480px) {
   .card {
     padding: 8px;
-  
+
   }
 
   .card-title {
@@ -770,26 +774,28 @@ body {
   width: 50%;
   padding: 10px;
   border-radius: 8px;
-  /* background: linear-gradient(to right, #9f7aea, #667eea); */
+
   background: var(--background-color1);
   font-weight: 600;
   color: white;
   cursor: pointer;
   margin: 0 auto;
-  /* Center horizontally */
+
   display: block;
   margin-bottom: 10px;
-  /* Ensures it's treated as a block element */
+
 }
 
 .send-button:hover {
   /* background-color: rgb(31, 31, 102); */
   color: black;
+  background-color: #f2b400;
 }
+
 @media (max-width: 768px) {
-  .query-container{
+  .query-container {
     padding: 8px;
-    
+
   }
 
 }
@@ -834,12 +840,14 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 20px;
-  flex-wrap: wrap; /* Ensure columns stack on smaller screens */
+  flex-wrap: wrap;
+  /* Ensure columns stack on smaller screens */
 }
 
 .footer-column {
   max-width: 250px;
-  margin-bottom: 20px; /* Add spacing between columns */
+  margin-bottom: 20px;
+  /* Add spacing between columns */
 }
 
 .footer-column h4 {
@@ -874,13 +882,16 @@ body {
 /* Adjustments for Mobile View */
 @media (max-width: 480px) {
   .footer-content {
-    flex-direction: column; /* Stack columns vertically */
+    flex-direction: column;
+    /* Stack columns vertically */
     align-items: center;
   }
 
   .footer-column {
-    max-width: 100%; /* Expand columns to full width */
-    text-align: center; /* Center text for mobile */
+    max-width: 100%;
+    /* Expand columns to full width */
+    text-align: center;
+    /* Center text for mobile */
   }
 
   .footer-column h4 {
@@ -892,7 +903,8 @@ body {
   }
 
   .social-connect p {
-    font-size: 14px; /* Reduce font size */
+    font-size: 14px;
+    /* Reduce font size */
   }
 
   .social-link {
@@ -901,7 +913,8 @@ body {
 
   .footer-bottom p {
     font-size: 12px;
-    margin: 5px 0; /* Adjust spacing */
+    margin: 5px 0;
+    /* Adjust spacing */
   }
 }
 
