@@ -46,7 +46,7 @@ const Community = () => {
   ];
 
   return (
-    <div className="gallery-container">
+    <div className="gallery-container" style={{ paddingTop: '60px', position: 'relative', zIndex: '1' }}>
       <h1 className="gallery-title">Community</h1>
       <div className="community-container" style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
         {cards.map((card, index) => (
