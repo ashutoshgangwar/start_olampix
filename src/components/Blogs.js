@@ -7,28 +7,56 @@ const expertData = [
     name: "P.T. USHA",
     title: "President of Indian Olympic Asso.",
     details:
-      "Neeraj Chopra became the first and only track and field athlete from India to win an Olympic gold medal. He is also a world champion and a Diamond League winner.",
+      "Pilavullakandi Thekkeparambil Usha (born 27 June 1964) is an Indian sports administrator and retired track and field athlete. Usha was born in Koothali near Perambra in Kozhikode district, Kerala. She grew up in Payyoli. Usha has been associated with Indian athletics since 1979.She has won 4 gold medals and 7 silver medals in the Asian Games. She is often associated as the `Queen of Indian track and field`",
   },
   {
     img: " /2012/mary_kom.jpeg",
     name: "Mary Kom",
     title: "World Champion Boxer",
     details:
-      "Fulton won the FIH Coach of the Year in 2015 and was the assistant coach of Belgium when they won the 2018 FIH Hockey World Cup and Olympic gold at Tokyo 2020.",
-  },
+      "Mangte Chungneijang Mary Kom (born 24 November 1982) is an Indian Olympic boxer, politician, and former Member of Rajya Sabha. She is the only woman to win the World Amateur Boxing Championship six times, the only female boxer to have won a medal in each one of the first seven World Championships, and the only boxer (male or female) to win eight World Championship medals.Nicknamed Magnificent Mary."
+    }, 
   {
     img: "/expert/Craig_Fulton.jpeg",
     name: "CRAIG FULTON",
     title: "Indian Hockey Team Coach",
     details:
-      "Fulton won the FIH Coach of the Year in 2015 and was the assistant coach of Belgium when they won the 2018 FIH Hockey World Cup and Olympic gold at Tokyo 2020.",
+      "Craig Fulton (born 6 November 1974) is a South African coach and former field hockey player. He currently coaches the India men's national team. As a player-coach with Pembroke Wanderers he won two Irish Senior Cups, two Men's Irish Hockey League titles and the EuroHockey Club Trophy. As a coach Fulton guided Ireland to third place at the 2015 Men's EuroHockey Nations Championship and to qualification for both the 2016 Summer Olympics and the 2018 Men's Hockey World Cup.",
   },
       {
-    img: "/2012/sushil.jpeg",
+    img: "/expert/sunil_chhrtri.jpeg",
     name: "Sunil Chhetri",
-    title: "World champion Wrestling",
+    title: "Indian Professional Footballer",
     details:
-      "Sunil Chhetri is the captain of the Indian national football team and one of the highest goal scorers in international football.",
+      "Sunil Chhetri (born 3 August 1984) is an Indian professional footballer who plays as a forward for Indian Super League club Bengaluru. He is the all-time top scorer in Indian Super League history. He is known for his link-up play, goal scoring abilities, and leadership.He is the fourth-highest international goalscorer,and is also the most-capped player and the all-time top goalscorer of the India national team. He is widely regarded as the greatest Indian football player of all time.",
+  },
+  {
+    img: "/expert/Neeraj_Chopra.jpg",
+    name: "Neeraj Chopra",
+    title: "World Champion,",
+    details:
+      "Subedar Major Neeraj Chopra PVSM VSM (born 24 December 1997) is an Indian track and field athlete. Considered as the greatest Indian javelin thrower, he's a double medalist at the Olympics, World Championships, and the Asian Games. He has won the Diamond League once. Chopra won the gold medal at the 2020 Olympics, becoming the first Asian javelin throw athlete to do so. He became the first Asian to win a gold in javelin at the World Championships after his win in 2023. Chopra has won gold medals in every major tournament.",
+  },
+  {
+    img: "/expert/Neeraj_Chopra.jpg",
+    name: "Neeraj Chopra",
+    title: "World Champion,",
+    details:
+      "Subedar Major Neeraj Chopra PVSM VSM (born 24 December 1997) is an Indian track and field athlete. Considered as the greatest Indian javelin thrower, he's a double medalist at the Olympics, World Championships, and the Asian Games. He has won the Diamond League once. Chopra won the gold medal at the 2020 Olympics, becoming the first Asian javelin throw athlete to do so. He became the first Asian to win a gold in javelin at the World Championships after his win in 2023. Chopra has won gold medals in every major tournament.",
+  },
+  {
+    img: "/expert/Neeraj_Chopra.jpg",
+    name: "Neeraj Chopra",
+    title: "World Champion,",
+    details:
+      "Subedar Major Neeraj Chopra PVSM VSM (born 24 December 1997) is an Indian track and field athlete. Considered as the greatest Indian javelin thrower, he's a double medalist at the Olympics, World Championships, and the Asian Games. He has won the Diamond League once. Chopra won the gold medal at the 2020 Olympics, becoming the first Asian javelin throw athlete to do so. He became the first Asian to win a gold in javelin at the World Championships after his win in 2023. Chopra has won gold medals in every major tournament.",
+  },
+  {
+    img: "/expert/Neeraj_Chopra.jpg",
+    name: "Neeraj Chopra",
+    title: "World Champion,",
+    details:
+      "Subedar Major Neeraj Chopra PVSM VSM (born 24 December 1997) is an Indian track and field athlete. Considered as the greatest Indian javelin thrower, he's a double medalist at the Olympics, World Championships, and the Asian Games. He has won the Diamond League once. Chopra won the gold medal at the 2020 Olympics, becoming the first Asian javelin throw athlete to do so. He became the first Asian to win a gold in javelin at the World Championships after his win in 2023. Chopra has won gold medals in every major tournament.",
   },
 ];
 
