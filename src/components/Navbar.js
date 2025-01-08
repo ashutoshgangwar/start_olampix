@@ -6,7 +6,7 @@ export default function Navbar() {
   const offset = -70;
 
   const navbarStyle = {
-    backgroundColor: "#003366",
+    backgroundColor: "#662e00",
     color: "white",
     position: "sticky",
     top: 0,

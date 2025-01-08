@@ -1,5 +1,5 @@
 :root {
-  --background-color1: #003366;
+  --background-color1: #662e00;
   --background-color2: rgb(3, 87, 32);
   --background-color3: white;
   --background-color4: rgb(3, 0, 2);
@@ -40,6 +40,7 @@ body {
   font-weight: bold;
   color: var(--background-color3);
   font-size: 1.5rem;
+  margin-left: 20px;
 }
 
 .navbar-nav {
@@ -100,6 +101,7 @@ body {
 
   .navbar-toggler {
     display: block;
+
   }
 
   .navbar-toggler.active+.navbar-nav {
@@ -111,13 +113,16 @@ body {
     padding: 12px;
     width: 100%;
     text-align: center;
+    margin-left: 20px;
   }
 }
 
 /* Optional Focus Effect for Toggler */
 .navbar-toggler:focus .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
 }
+
 
 
 
@@ -216,6 +221,7 @@ body {
   background-color: #f2b400;
   color: black;
 }
+
 
 /* Responsive Styling */
 @media screen and (max-width: 768px) {
