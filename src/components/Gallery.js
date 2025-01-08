@@ -215,7 +215,8 @@ export default function Gallery() {
   return (
     <div className="gallery-container">
       <h1 className="gallery-title">
-        Gallery (Total Medal : {filteredImages.length})
+      ATHLETE PROFILES 
+      <h5>(Total Medal : {filteredImages.length})</h5> 
       </h1>
       {/* <p className="gallery-subtitle">Filter by year or medal type</p> */}
 
